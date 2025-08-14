@@ -1,220 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishant's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-    header {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: white;
-      padding: 40px 0;
-      text-align: center;
-    }
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 15px;
-    }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
 
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 2.5rem;
-    }
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
 
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
 
-    nav {
-      margin-top: 15px;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
 
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
 
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+        .left {
+            font-size: 1.5rem;
+        }
 
-    h2 {
-      color: #2575fc;
-      border-bottom: 3px solid #6a11cb;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 130px 0;
+            align-items: center;
+        }
 
-    #about {
-      text-align: center;
-    }
+        .firstSection>div {
+            width: 30%;
+        }
 
-    #about p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: auto;
-    }
+        .leftSection {
+            font-size: 3rem;
+        }
 
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 20px;
-    }
+        .leftSection .buttons {
+            padding: 50px 0;
+        }
 
-    .skill {
-      background: #2575fc;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-weight: bold;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-    }
+        .leftSection .btn {
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 12px;
+        }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
+        .purple {
+            color: rgb(170, 107, 228);
+        }
 
-    .project-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
+        .text-gray {
+            color: rgb(170, 107, 228);
+        }
 
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
+        #element {
+            color: gray;
+        }
 
-    .project-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
 
-    .project-card h3 {
-      padding: 15px;
-      margin: 0;
-      color: #6a11cb;
-    }
+        .secondSection h1 {
+            font-size: 1.5rem;
+        }
 
-    .project-card p {
-      padding: 0 15px 15px;
-      font-size: 0.95rem;
-      color: #555;
-    }
+        .secondSection .box {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
 
-    #contact p {
-      font-size: 1.1rem;
-    }
+        .secondSection .box::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            /* adjust for icon alignment */
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: white;
+            z-index: 0;
+        }
 
-    .github-link {
-      color: #2575fc;
-      font-weight: bold;
-      text-decoration: none;
-    }
+        .secondSection .vertical {
+            position: relative;
+            background: none;
+            z-index: 1;
+        }
 
-    .github-link:hover {
-      text-decoration: underline;
-    }
 
-    footer {
-      text-align: center;
-      background: #222;
-      color: white;
-      padding: 15px;
-      margin-top: 30px;
-    }
-  </style>
+        .icon-top {
+            font-size: 24px;
+            color: #9c97f1;
+            position: relative;
+            top: -32px;
+            left: -12px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 40px;
+            width: 150px;
+            font-size: 14px;
+            /* font-weight: bold; */
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 50px;
+            width: 150px;
+            color: gray;
+            font-size: 9px;
+        }
+
+        footer {
+            background-color: #0e0e1a;
+            color: white;
+            padding: 40px 0 10px 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-first h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #9c97f1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.9rem;
+            color: gray;
+            margin-top: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .footer-social i {
+            font-size: 24px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social i:hover {
+            color: #9c97f1;
+        }
+
+        @media print {
+
+            nav,
+            footer,
+            .buttons {
+                display: none;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <header>
+        <nav>
+            <div class="left">Nishant's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <header>
-    <img src="https://via.placeholder.com/120" alt="Profile Picture">
-    <h1>Your Name</h1>
-    <p>Web Developer | Designer | Programmer</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="https://github.com/your-username" target="_blank">GitHub</a>
-    </nav>
-  </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi my name is <span class="purple">Nishant</span>
+                <div>and I am Learning</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn" onclick="window.print()">Download Resume</button>
+                    <a href="https://github.com/Nishant19Yadav" target="_blank">
+                        <button class="btn">Visit Github</button>
+                    </a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="c:\Users\nisha\Pictures\Screenshots\Screenshot (67).png" alt="Nishant"
+                    style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;">
+            </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I’m a passionate web developer who loves creating clean and user-friendly websites. I enjoy learning new technologies and solving real-world problems through code.</p>
-  </section>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Skills & Projects</h1>
+            <br><br><br>
+            <div class="box">
+                <div class="vertical">
+                    <i class="fas fa-code icon-top"></i>
+                    <div class="vertical-title">DSA</div>
+                    <div class="vertical-desc">Solved 100+ problems on LeetCode and GFG. Strong understanding of
+                        algorithms and data structures.</div>
+                </div>
+                <div class="vertical">
+                    <i class="fas fa-database icon-top"></i>
+                    <div class="vertical-title">Database Basics (SQL)</div>
+                    <div class="vertical-desc">Familiar with relational databases, SQL queries, joins, and
+                        normalization. Practiced using MySQL.</div>
+                </div>
+                <div class="vertical">
+                    <i class="fab fa-html5 icon-top"></i>
+                    <div class="vertical-title">HTML</div>
+                    <div class="vertical-desc">Built structured and semantic web pages with tags, forms, tables, and
+                        basic SEO.</div>
+                </div>
+                <div class="vertical">
+                    <i class="fab fa-css3-alt icon-top"></i>
+                    <div class="vertical-title">CSS</div>
+                    <div class="vertical-desc">Styled responsive websites using Flexbox and Grid. Worked with
+                        animations, hover effects, and layouts.</div>
+                </div>
+                <div class="vertical">
+                    <i class="fab fa-js icon-top"></i>
+                    <div class="vertical-title">JavaScript</div>
+                    <div class="vertical-desc">Knowledge of DOM manipulation, ES6+ features, and built interactive
+                        elements with basic problem-solving.</div>
+                </div>
+                <div class="vertical">
+                    <i class="fas fa-dumbbell icon-top"></i>
+                    <div class="vertical-title">Fitness App Project</div>
+                    <div class="vertical-desc">Created during Jovac — includes calorie & protein intake calculators,
+                        water tracker, and macronutrient breakdown using Flutter.</div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">React</div>
-      <div class="skill">Node.js</div>
-      <div class="skill">Python</div>
-      <div class="skill">Git & GitHub</div>
-    </div>
-  </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Nishant's Developer Portfolio</h3>
+            </div>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/nishant-singh-1069002a3/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Nishant19Yadav" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Nishant Singh. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <img src="https://via.placeholder.com/400x180" alt="Project 1">
-        <h3>Project 1</h3>
-        <p>Description of your project here.</p>
-      </div>
-      <div class="project-card">
-        <img src="https://via.placeholder.com/400x180" alt="Project 2">
-        <h3>Project 2</h3>
-        <p>Description of your project here.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@example.com</p>
-    <p>Phone: +91 12345 67890</p>
-    <p>GitHub: <a class="github-link" href="https://github.com/your-username" target="_blank">https://github.com/your-username</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
-  </footer>
-
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Development', 'with a strong foundation in Data Structures and Algorithms (C++).'],
+            typeSpeed: 50,
+        });
+    </script>
 </body>
+
 </html>
