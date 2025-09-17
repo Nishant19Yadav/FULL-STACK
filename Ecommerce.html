@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern eCommerce</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #2c3e50, #34495e);
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Banner */
+    .banner {
+      background: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .banner h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .banner .btn {
+      background: #27ae60;
+      padding: 12px 20px;
+      font-size: 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .banner .btn:hover {
+      background: #219150;
+    }
+
+    /* Products Grid */
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin: 40px 0 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin: 12px 0 6px;
+      font-size: 20px;
+    }
+
+    .price {
+      color: #27ae60;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 15px;
+      background: #27ae60;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #219150;
+    }
+
+    /* About Section */
+    .about {
+      background: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+.contact {
+  background: #f1f1f1;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;   /* keeps it from going too wide */
+  margin: auto;       /* centers it */
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box; /* prevents overflow */
+}
+
+button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%; /* makes button full width */
+}
+
+button:hover {
+  background: #219150;
+}
+
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .banner h2 {
+        font-size: 28px;
+      }
+      .banner p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>My Shop</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h2>Welcome to My Shop</h2>
+    <p>Find the best products at unbeatable prices</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </section>
+
+  <!-- Featured Products -->
+  <h2 class="section-title">Featured Products</h2>
+  <section class="products" id="products">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1512499617640-c2f99909879d?auto=format&fit=crop&w=600&q=80" alt="Shoes">
+      <h3>Running Shoes</h3>
+      <p class="price">$45.00</p>
+      <a href="#" class="btn">Add to Cart</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1593032457864-5dfdfc93917f?auto=format&fit=crop&w=600&q=80" alt="Headphones">
+      <h3>Wireless Headphones</h3>
+      <p class="price">$60.00</p>
+      <a href="#" class="btn">Add to Cart</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1585386959984-a41552263a93?auto=format&fit=crop&w=600&q=80" alt="Watch">
+      <h3>Smart Watch</h3>
+      <p class="price">$99.00</p>
+      <a href="#" class="btn">Add to Cart</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1612817159949-0a5f48da7e4c?auto=format&fit=crop&w=600&q=80" alt="Laptop">
+      <h3>Laptop</h3>
+      <p class="price">$750.00</p>
+      <a href="#" class="btn">Add to Cart</a>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      Welcome to <strong>My Shop</strong>, your number one source for all things fashion, electronics, and lifestyle.  
+      We're dedicated to giving you the very best products, with a focus on quality, customer service, and uniqueness.  
+      Founded in 2025, My Shop has come a long way from its beginnings.  
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Shop | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
